@@ -19,7 +19,8 @@ import { ExternalApiComponent } from './pages/external-api/external-api.componen
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
-import { RessetPasswordComponent } from './pages/resset-password/resset-password.component';
+import { ResetPasswordComponent } from './pages/resset-password/reset-password.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -33,22 +34,23 @@ import { RessetPasswordComponent } from './pages/resset-password/resset-password
     LoadingComponent,
     ExternalApiComponent,
     ErrorComponent,
-    RessetPasswordComponent
+    ResetPasswordComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgbModule,
-    HighlightModule,
-    FontAwesomeModule,
-    AuthModule.forRoot({
-      ...env.auth,
-      httpInterceptor: {
-        ...env.httpInterceptor,
-      },
-    }),
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        NgbModule,
+        HighlightModule,
+        FontAwesomeModule,
+        AuthModule.forRoot({
+            ...env.auth,
+            httpInterceptor: {
+                ...env.httpInterceptor,
+            },
+        }),
+        FormsModule,
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

@@ -5,7 +5,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ExternalApiComponent } from './pages/external-api/external-api.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AuthGuard } from '@auth0/auth0-angular';
-import {RessetPasswordComponent} from "./pages/resset-password/resset-password.component";
+import {ResetPasswordComponent} from "./pages/resset-password/reset-password.component";
 
 const routes: Routes = [
   {
@@ -14,8 +14,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },  {
     path: 'reset',
-    component: RessetPasswordComponent,
-    canActivate: [AuthGuard],
+    component: ResetPasswordComponent,
+   // canActivate: [AuthGuard],
   },
   {
     path: 'external-api',
