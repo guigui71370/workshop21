@@ -17,6 +17,15 @@
   <div class="row" *ngIf="profileJson">
     <pre
       class="rounded"
-    ><code class="json" [highlight]="profileJson"></code></pre>
+    ><!--<code class="json" [highlight]="profileJson"></code>-->
+        <ul>
+          <li>Email:{{user.email}}</li>
+          <li>username:{{user.name}}</li>
+          <li>family name:{{user.family_name}}</li>
+          <li>first name:{{user.given_name}}</li>
+
+        </ul>
+
+    </pre>
   </div>
 </div>
