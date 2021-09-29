@@ -19,7 +19,6 @@ import { ExternalApiComponent } from './pages/external-api/external-api.componen
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
-import { LoginButtonComponent } from './login-button/login-button.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +31,7 @@ import { LoginButtonComponent } from './login-button/login-button.component';
     HomeContentComponent,
     LoadingComponent,
     ExternalApiComponent,
-    ErrorComponent,
-    LoginButtonComponent
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

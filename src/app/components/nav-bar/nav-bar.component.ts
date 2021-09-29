@@ -12,6 +12,7 @@ export class NavBarComponent implements OnInit {
   isCollapsed = true;
   faUser = faUser;
   faPowerOff = faPowerOff;
+  public test = true;
 
   constructor(
     public auth: AuthService,
