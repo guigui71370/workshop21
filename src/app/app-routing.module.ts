@@ -5,11 +5,16 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ExternalApiComponent } from './pages/external-api/external-api.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { AuthGuard } from '@auth0/auth0-angular';
+import {RessetPasswordComponent} from "./pages/resset-password/resset-password.component";
 
 const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [AuthGuard],
+  },  {
+    path: 'reset',
+    component: RessetPasswordComponent,
     canActivate: [AuthGuard],
   },
   {
