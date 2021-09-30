@@ -14,6 +14,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HomeContentComponent } from './components/home-content/home-content.component';
+import { QuizzComponent } from './components/quizz/quizz.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { ExternalApiComponent } from './pages/external-api/external-api.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -36,7 +37,8 @@ import { MorpionComponent } from './pages/morpion/morpion.component';
     ExternalApiComponent,
     ErrorComponent,
     ResetPasswordComponent,
-    MorpionComponent
+    MorpionComponent,
+    QuizzComponent
   ],
     imports: [
         BrowserModule,
@@ -72,7 +74,6 @@ import { MorpionComponent } from './pages/morpion/morpion.component';
         },
       },
     },
-    
   ],
   bootstrap: [AppComponent],
 })

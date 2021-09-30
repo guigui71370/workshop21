@@ -1,5 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import {Component, OnInit} from '@angular/core';
+import {faLink} from '@fortawesome/free-solid-svg-icons';
+import { QuestionsService} from "../../questions/questions.service";
+import {Observable } from "rxjs";
+
+export interface QuestionsInterface {
+  _id: string,
+  question: string,
+  reponses: {
+    [rep: string]: boolean
+  }
+}
 
 @Component({
   selector: 'app-home-content',
@@ -8,10 +18,14 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeContentComponent implements OnInit {
   faLink = faLink;
+  public questions$: Observable<QuestionsInterface[]>
 
-  constructor() { }
+  constructor(public questionsService: QuestionsService) {
+    this.questions$ = questionsService.GetXhrQuestions()
+  }
 
   ngOnInit() {
+
   }
 
 }

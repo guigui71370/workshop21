@@ -1,0 +1,44 @@
+<div class="row quizz">
+  <ng-container *ngIf="getQuestion(questions, false) as question; else finQuizz">
+    <div class="col-md-5 mb-4">
+      <h4>Question : </h4>
+      <hr>
+      <h6 class="mb-3">
+        {{ question.question }}
+      </h6>
+    </div>
+
+    <div class="col-md"></div>
+
+    <div class="col-md-5 mb-4">
+      <div class="reponses">
+        <ng-container *ngFor="let rep of question.reponses | keyvalue; trackBy: trackByIndex;">
+            <div
+              (click)="(answered())"
+              class="rep {{ rep.value }}"
+              [ngClass]="status ? 'answered' : ''">
+              <p>
+                {{ rep.key }}
+              </p>
+            </div>
+        </ng-container>
+      </div>
+      <div class="nextButton">
+        <input id="nextButton"
+          [ngClass]="status ? 'displayNextButton' : ''"
+          (click)="getQuestion(questions, true)"
+          class="btn btn-primary" type="button" value="Next"
+        >
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #finQuizz>
+    <div class="col-md-5 mb-4">
+      <h4>Plus de questions</h4>
+      <hr>
+    </div>
+
+    <div class="col-md"></div>
+  </ng-template>
+</div>

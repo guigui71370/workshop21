@@ -1,0 +1,40 @@
+.rep {
+  padding: 20px 20px 0px 20px;
+  margin: 1em;
+  text-align: center;
+  border: 2px solid darkgrey;
+  border-radius: 20px;
+}
+
+.rep:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.true.answered{
+  background-color: rgba(128, 255, 128, 0.3);
+}
+
+.false.answered {
+  background-color: rgba(255, 128, 128, 0.3);
+}
+
+.true.answered:hover{
+  background-color: rgba(128, 255, 128, 0.3);
+}
+
+.false.answered:hover{
+  background-color: rgba(255, 128, 128, 0.3);
+}
+
+.nextButton {
+   text-align: center;
+}
+
+#nextButton{
+  display: none;
+}
+
+#nextButton.displayNextButton{
+  display: block;
+}
