@@ -15,8 +15,10 @@ export class ResetPasswordComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  verification(form: NgForm):void{
-    this.oldPassword=form.value['old'];
+  verification():void{
+    //this.oldPassword=form.value['old'];
     console.log(this.oldPassword);
+    console.log(this.newPassword);
+    console.log(this.confirmPassword);
   }
 }

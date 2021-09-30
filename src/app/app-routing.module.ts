@@ -6,6 +6,7 @@ import { ExternalApiComponent } from './pages/external-api/external-api.componen
 import { ErrorComponent } from './pages/error/error.component';
 import { AuthGuard } from '@auth0/auth0-angular';
 import {ResetPasswordComponent} from "./pages/resset-password/reset-password.component";
+import {MorpionComponent} from "./pages/morpion/morpion.component";
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
     path: 'reset',
     component: ResetPasswordComponent,
    // canActivate: [AuthGuard],
+  }, {
+    path: 'morpion',
+    component: MorpionComponent,
+   canActivate: [AuthGuard],
   },
   {
     path: 'external-api',

@@ -21,6 +21,7 @@ import { AuthHttpInterceptor, AuthModule } from '@auth0/auth0-angular';
 import { environment as env } from '../environments/environment';
 import { ResetPasswordComponent } from './pages/resset-password/reset-password.component';
 import {FormsModule} from "@angular/forms";
+import { MorpionComponent } from './pages/morpion/morpion.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {FormsModule} from "@angular/forms";
     LoadingComponent,
     ExternalApiComponent,
     ErrorComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    MorpionComponent
   ],
     imports: [
         BrowserModule,
@@ -70,6 +72,7 @@ import {FormsModule} from "@angular/forms";
         },
       },
     },
+    
   ],
   bootstrap: [AppComponent],
 })
